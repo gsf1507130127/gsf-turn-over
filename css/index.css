@@ -1,0 +1,79 @@
+@charset "utf-8";
+/*标题*/
+h1 {
+	color: #fff;
+	padding-top: 100px;
+}
+/*主内容区*/
+#contect {
+	width: 960px;
+	margin: 50px auto 0;
+}
+#contect ul {
+	margin-right: -20px;
+}
+#contect ul li {
+	width: 225px;
+	height: 180px;
+	float: left;
+	margin-right: 20px;
+}
+#contect ul li a {
+	display: block;
+	width: 225px;
+	height: 180px;
+	position: relative;
+	text-decoration: none;
+	/*远近度*/
+	perspective: 500px;
+}
+#contect ul li a img {
+	display: block;
+}
+
+#contect ul li a .tips {
+	line-height: 24px;
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+ /*正反面*/
+#contect ul li a > div {
+	transition: all 1s;
+	/*背面不可视*/
+	backface-visibility: hidden;
+}
+/*正面内容*/
+#contect ul li a:hover .forword {
+	transform: rotateY(-180deg);
+}
+/*背面内容*/
+#contect ul li a .back {
+	width: 225px;
+	height: 180px;
+	background: url(../images/bg.jpg) no-repeat;
+	transform: rotateY(180deg);
+	position: absolute;
+	top: 0;
+}
+#contect ul li a .back h3 {
+	color: #fff;
+	line-height: 40px;
+	text-align: center;
+	border-bottom: 1px dashed #fff; 
+	margin-bottom: 15px;
+}
+#contect ul li a .back p {
+	color: #fff;
+	font-size: 12px;
+	line-height: 18px;
+	text-indent: 2em;
+	padding: 0 10px;
+}
+#contect ul li a:hover .back {
+	transform: rotateY(0deg);
+}
